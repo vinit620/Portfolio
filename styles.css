@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  transition: 0.3s;
+  background-color: rgb(250, 241, 241);
+  font-family: 'Poppins', sans-serif;
+  color: rgb(19, 12, 12);
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 300;
+  margin: 50px 0 10px 0;
+}
+
+p {
+  margin: 0px;
+  font-size: 20px;
+}
+
+a {
+  color: blueviolet;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.dark a {
+  color: rgb(141, 182, 216);
+}
+
+/* HEADER */
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.switch {
+  height: 40px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: rgb(15, 15, 15);
+  position: relative;
+}
+
+.flicker {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: white;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: inset 4px 4px 4px white,
+    inset -4px -4px 4px rgb(195 193 198 / 90%);
+  transition: 0.3s;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 30px 30px;
+  background-color: rgb(209, 212, 212);
+}
+
+.dark footer {
+  background-color: rgb(35, 35, 35);
+}
+
+/* DARK MODE */
+.dark {
+  background-color: rgb(57, 57, 57);
+  transition: 0.3s;
+  color: white;
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  right: 17px;
+  top: 7px;
+}
+
+.dark .flicker {
+  transform: translateX(40px);
+}
+
+
+/* Main */
+.main {
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-text {
+  padding: 30px;
+}
+
+/* LOGO */
+.logo {
+  position: relative;
+  width: 50%;
+  height: 350px;
+  display: block;
+}
+
+.cube {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  transform: rotate(-25deg) skew(25deg);
+}
+
+.cube:before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 100%;
+  transform: skewY(-45deg);
+  left: -20px;
+  bottom: -10px;
+}
+
+.cube:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 21px;
+  transform: skewX(-45deg);
+  left: -10px;
+  bottom: -20px;
+}
+
+#html {
+  left: 45px;
+  bottom: 120px;
+  background-image: url('images/html5.png');
+  background-size: cover;
+  background-color: rgb(247, 150, 150);
+  box-shadow: -60px 60px 12px rgb(40 40 40 / 15%);
+}
+
+#html:before {
+  background-color: rgb(218, 25, 25);
+}
+
+#html:after {
+  background-color: rgb(235, 62, 62);
+}
+
+.dark #html {
+  box-shadow: -60px 60px 12px rgb(240 240 240 / 15%);
+}
+
+
+#css {
+  right: 48%;
+  bottom: 0;
+  background-image: url('images/css3.png');
+  background-size: cover;
+  background-color: rgb(205, 188, 221);
+  box-shadow: -60px 60px 12px rgb(40 40 40 / 15%);
+}
+
+#css:before {
+  background-color: rgb(124, 65, 180);
+}
+
+#css:after {
+  background-color: rgb(168, 118, 214);
+}
+
+.dark #css {
+  box-shadow: -60px 60px 12px rgb(240 240 240 / 15%);
+}
+
+#javascript {
+  right: 18%;
+  bottom: 130px;
+  background-image: url('images/javascript.png');
+  background-size: cover;
+  background-color: rgb(57, 209, 120);
+  box-shadow: -60px 60px 12px rgb(40 40 40 / 15%);
+}
+
+#javascript:before {
+  background-color: rgb(112, 219, 79);
+}
+
+#javascript:after {
+  background-color: rgb(140, 219, 166);
+}
+
+.dark #javascript {
+  box-shadow: -60px 60px 12px rgb(240 240 240 / 15%);
+}
+
+#python {
+  right: 50%;
+  top: 30px;
+  background-image: url('images/python.png');
+  background-size: cover;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -60px 60px 12px rgb(40 40 40 / 15%);
+}
+
+#python:before {
+  background-color: rgb(116, 103, 170);;
+}
+
+#python:after {
+  background-color: rgb(153, 145, 221);
+}
+
+.dark #python {
+  box-shadow: -60px 60px 12px rgb(240 240 240 / 15%);
+}
+
+/* PROJECT */
+.projects {
+  margin-top: 30px;
+}
+
+.square {
+  width: 96%;
+  height: 300px;
+  margin: 2%;
+  text-align: center;
+  background-color: rgb(209, 212, 212);
+  border-radius: 3%;
+  position: relative;
+}
+
+.dark .square {
+  background-color: rgb(35, 35, 35);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.square a {
+  position: absolute;
+  bottom: 10%;
+  left: 33%;
+}
+
+#DL {
+  background-image: url(images/performance.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+#ML {
+  background-image: url(images/ml.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
+}
+
+#WD {
+  background-image: url(images/web.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55%;
+}
+
+#CP {
+  background-image: url(images/c.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+}
+
+@media only screen and (min-width: 970px) {
+  .main-text {
+    width: 50%
+  }
+
+  .square {
+    width: 48%;
+    margin: 1%;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .logo {
+    display: none;
+  }
+
+  .square {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    background-position: right;
+    background-size: 30px;
+  }
+
+  .square a {
+    left: 5%
+  }
+
+}
